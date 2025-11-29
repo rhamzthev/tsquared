@@ -156,7 +156,7 @@ section {
 
 .btn-primary {
   background-color: var(--accent-color);
-  color: #000; /* Contrast for lavender */
+  color: #000;
 }
 
 .btn-primary:hover {
@@ -165,12 +165,12 @@ section {
 
 .btn-secondary {
   background-color: transparent;
-  border-color: var(--text-color);
-  color: var(--text-color);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .btn-secondary:hover {
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   color: #000;
 }
 
@@ -190,7 +190,7 @@ section {
 .service-card h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
 /* About/Team */
@@ -286,7 +286,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 button[type="submit"] {
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   color: #000;
   border: none;
   padding: 1.2rem;
@@ -300,7 +300,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-hover);
 }
 
 button[type="submit"]:disabled {
