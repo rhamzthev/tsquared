@@ -1,18 +1,36 @@
 :root {
-    --bg-color: #050505;
-    --text-color: #ffffff;
-    --text-muted: #a0a0a0;
-    --accent-color: #ddbbff; /* A sophisticated Lavender */  
+    /* Enable light-dark() function */
+    color-scheme: light dark;
+
+    /* Light mode colors */
+    --light-bg: #fafafa;
+    --light-text: #0a0a0a;
+    --light-text-muted: #5a5a5a;
+    --light-border: #d0d0d0;
+
+    /* Dark mode colors */
+    --dark-bg: #050505;
+    --dark-text: #ffffff;
+    --dark-text-muted: #a0a0a0;
+    --dark-border: #333333;
+
+    /* Accent colors (same for both modes) */
+    --accent-color: #ddbbff;
     --accent-hover: #cc99ff;
 
-    /* seperate accents */
+    /* Separate accents */
     --accent-rhamsez: #ffbbbb;
     --accent-hover-rhamsez: #ff9999;
 
     --accent-pharaoh: #bbbbff;
     --accent-hover-pharaoh: #9999ff;
 
-    --border-color: #333333;
+    /* Apply light-dark() function */
+    --bg-color: light-dark(var(--light-bg), var(--dark-bg));
+    --text-color: light-dark(var(--light-text), var(--dark-text));
+    --text-muted: light-dark(var(--light-text-muted), var(--dark-text-muted));
+    --border-color: light-dark(var(--light-border), var(--dark-border));
+
     --font-main: 'Playfair Display', serif;
   }
 
@@ -156,7 +174,7 @@ section {
 
 .btn-primary {
   background-color: var(--accent-color);
-  color: #000;
+  color: light-dark(#000, #000);
 }
 
 .btn-primary:hover {
@@ -171,7 +189,7 @@ section {
 
 .btn-secondary:hover {
   background-color: var(--accent-color);
-  color: #000;
+  color: light-dark(#000, #000);
 }
 
 /* Services */
@@ -273,6 +291,11 @@ input, select, textarea {
   margin-bottom: 2rem;
 }
 
+select option {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 textarea {
   border: 1px solid var(--border-color);
   padding: 1rem;
@@ -287,7 +310,7 @@ input:focus, select:focus, textarea:focus {
 
 button[type="submit"] {
   background-color: var(--accent-color);
-  color: #000;
+  color: light-dark(#000, #000);
   border: none;
   padding: 1.2rem;
   font-size: 1rem;

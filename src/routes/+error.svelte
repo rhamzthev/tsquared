@@ -77,7 +77,7 @@
     flex-wrap: wrap;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary {
     padding: 1rem 2.5rem;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -90,22 +90,11 @@
 
   .btn-primary {
     background-color: var(--accent-color);
-    color: #000;
+    color: light-dark(#000, #000);
   }
 
   .btn-primary:hover {
     background-color: var(--accent-hover);
-  }
-
-  .btn-secondary {
-    background-color: transparent;
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-  }
-
-  .btn-secondary:hover {
-    background-color: var(--accent-color);
-    color: #000;
   }
 
   @media (max-width: 768px) {
@@ -126,7 +115,7 @@
       width: 100%;
     }
 
-    .btn-primary, .btn-secondary {
+    .btn-primary {
       width: 100%;
       text-align: center;
     }
